@@ -24,11 +24,41 @@ namespace ParProgrammering.Controllers
         {
             return _manager.GetAllRecords();
         }
-
-        [Route("{title}")]
+        [HttpGet]
+        [Route("title/{title}")]
         public IEnumerable<MusicRecord> GetByTitle(string title)
         {
             return _manager.GetByTitle(title);
+        }
+        [HttpGet]
+        [Route("artist/{artist}")]
+        public IEnumerable<MusicRecord> GetByArtist(string artist)
+        {
+            return _manager.GetByArtist(artist);
+        }
+        [HttpGet]
+        [Route("year/{year}")]
+        public IEnumerable<MusicRecord> GetByYear(int year)
+        {
+            return _manager.GetByYear(year);
+        }
+
+        [HttpPost]
+        public MusicRecord AddRecord(MusicRecord record)
+        {
+            return _manager.AddRecord(record);
+        }
+
+        [HttpPut]
+        public MusicRecord UpdateRecord(int id, MusicRecord record)
+        {
+            return _manager.UpdateRecord(id, record);
+        }
+
+        [HttpDelete]
+        public MusicRecord DeleteRecord(int id)
+        {
+            return _manager.DeleteRecord(id);
         }
     }
 }

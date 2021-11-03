@@ -7,6 +7,7 @@ namespace ParProgrammering.Model
 {
     public class MusicRecord
     {
+        public int ID { get; set; }
         public string Title { get; set; }
         public string Artist { get; set; }
         public int Duration { get; set; }
@@ -26,7 +27,7 @@ namespace ParProgrammering.Model
 
         public override string ToString()
         {
-            return $"{Title} by {Artist} published {PublicationYear} lasting {Duration}";
+            return $"{ID} : {Title} by {Artist} published {PublicationYear} lasting {Duration}";
         }
     }
 }
