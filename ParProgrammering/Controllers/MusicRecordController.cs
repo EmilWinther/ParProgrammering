@@ -26,7 +26,7 @@ namespace ParProgrammering.Controllers
         }
 
         [Route("{title}")]
-        public MusicRecord GetByTitle(string title)
+        public IEnumerable<MusicRecord> GetByTitle(string title)
         {
             return _manager.GetByTitle(title);
         }

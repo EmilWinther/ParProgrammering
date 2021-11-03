@@ -20,9 +20,15 @@ namespace ParProgrammering.Managers
         {
             return new List<MusicRecord>(liste);
         }
-        public MusicRecord GetByTitle(string title)
+        public List<MusicRecord> GetByTitle(string title)
         {
-            return liste.Find(record => record.Title == title);
+            List<MusicRecord> result = new List<MusicRecord>(liste);
+            if (title != null)
+            {
+                result = result.FindAll(data => data.Title.Contains(title, StringComparison.OrdinalIgnoreCase));
+            }
+
+            return result;
         }
         public MusicRecord GetByArtist(string artist)
         {
