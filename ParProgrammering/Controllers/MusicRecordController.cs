@@ -50,12 +50,14 @@ namespace ParProgrammering.Controllers
         }
 
         [HttpPut]
+        [Route("{id}")]
         public MusicRecord UpdateRecord(int id, MusicRecord record)
         {
             return _manager.UpdateRecord(id, record);
         }
 
         [HttpDelete]
+        [Route("{id}")]
         public MusicRecord DeleteRecord(int id)
         {
             return _manager.DeleteRecord(id);
