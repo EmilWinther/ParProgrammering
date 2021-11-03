@@ -44,14 +44,14 @@ namespace ParProgrammering.Controllers
         }
 
         [HttpPost]
-        public MusicRecord AddRecord(MusicRecord record)
+        public MusicRecord AddRecord([FromBody]MusicRecord record)
         {
             return _manager.AddRecord(record);
         }
 
         [HttpPut]
         [Route("{id}")]
-        public MusicRecord UpdateRecord(int id, MusicRecord record)
+        public MusicRecord UpdateRecord(int id, [FromBody]MusicRecord record)
         {
             return _manager.UpdateRecord(id, record);
         }
