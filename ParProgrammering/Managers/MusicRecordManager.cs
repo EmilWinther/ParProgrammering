@@ -54,6 +54,7 @@ namespace ParProgrammering.Managers
 
         public MusicRecord AddRecord(MusicRecord record)
         {
+            record.ID = nextID++;
             liste.Add(record);
             return record;
         }

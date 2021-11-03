@@ -18,11 +18,11 @@ namespace ParProgrammering.Managers.Tests
             Assert.AreEqual(3, _manager.GetAllRecords().Count);
         }
 
-        //[TestMethod()]
-        //public void GetByTitleTest()
-        //{
-        //    Assert.Fail();
-        //}
+        [TestMethod()]
+        public void GetByTitleTest()
+        {
+            Assert.Fail();
+        }
 
         //[TestMethod()]
         //public void GetByArtistTest()
